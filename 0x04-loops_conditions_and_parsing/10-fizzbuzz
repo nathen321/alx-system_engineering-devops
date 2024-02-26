@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # This script is a FizzBuzz challlenge
-i=1
-while [ "$i" -le 100 ]
+for ((i=1; i<101; i++))
 do
 	if ((i % 15 == 0)); then
 		echo "FizzBuzz"
@@ -9,6 +8,7 @@ do
 		echo "Fizz"
 	elif ((i % 5 == 0)); then
 		echo "Buzz"
-    fi   
-    ((i++));
+	else
+		echo "$i"
+	fi
 done
