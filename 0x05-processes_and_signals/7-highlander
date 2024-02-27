@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # my pid
-msg()
+reac()
 {
 	echo "I am invincible!!!"
 }
-trap "msg" SIGTERM
+trap "reac" SIGTERM
 
 while true
 do
