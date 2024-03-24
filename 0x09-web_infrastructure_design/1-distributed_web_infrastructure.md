@@ -2,7 +2,6 @@
 
 ![Image of a distributed web infrastructure](1-distributed_web_infrastructure.jpg)
 
-[Visit Board](https://miro.com/app/board/uXjVOfI6jcU=/)
 
 ## Description
 Distributed web infrastructure refers to the concept of distributing the components of a website across multiple servers or devices, rather than hosting everything on a single server.
