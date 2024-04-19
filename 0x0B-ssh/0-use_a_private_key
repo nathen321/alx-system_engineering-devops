@@ -1,2 +1,2 @@
-#!/user/bin/env bash
+#!/usr/bin/env bash
 ssh ubuntu@100.26.239.249
