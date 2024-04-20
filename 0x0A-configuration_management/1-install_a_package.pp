@@ -1,3 +1,4 @@
+#!/usr/bin/pup
 # Install an especific version of flask
 
 package {'flask':
