@@ -8,6 +8,9 @@ global
         group haproxy
         daemon
 
+        maxconn 2048
+        tune.ssl.default-dh-param 2048
+
         # Default SSL material locations
         ca-base /etc/ssl/certs
         crt-base /etc/ssl/private
@@ -33,20 +36,20 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend ludaw-frontend
-        bind *:80
-        mode http
-        http-request redirect scheme https code 301 unless { ssl_fc }
-        http-request set-header X_Forwarded-Proto http
-        default_backend ludaw-backend
+        option forwardfor
+        option http-server-close
 
 frontend ludaw-frontend-https
+        bind *:80
         bind *:443 ssl crt /etc/haproxy/certs/www.ludaw.tech.pem
+        http-request redirect scheme https unless { ssl_fc }
         http-request set-header X-Forwarded-Proto https
         default_backend ludaw-backend
 
 backend ludaw-backend
-        bind :80
         balance roundrobin
         server 531337-web-01 100.26.239.249:80 check
         server 531337-web-02 34.232.77.141:80 check
+
+backend letsencrypt-backend
+    server letsencrypt 127.0.0.1:54321
