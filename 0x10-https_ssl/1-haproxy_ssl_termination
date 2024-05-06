@@ -41,7 +41,7 @@ frontend ludaw-frontend
         default_backend ludaw-backend
 
 frontend ludaw-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/ludaw.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.ludaw.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend ludaw-backend
 
