@@ -47,5 +47,5 @@ frontend ludaw-frontend-https
 
 backend ludaw-backend
         balance roundrobin
-        server 531337-web-01 100.26.239.249:80 check
-        server 531337-web-02 34.232.77.141:80 check
+        server 531337-web-01 54.237.2.199:80 check
+        server 531337-web-02 3.85.1.131:80 check
