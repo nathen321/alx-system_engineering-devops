@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #config ufw
+sudo adduser nginx
 sudo chown -R nginx:nginx /var/log/nginx
 sudo chown -R nginx:nginx /var/lib/nginx
 sed -i "1s/.*/user nginx;/" /etc/nginx/nginx.conf
