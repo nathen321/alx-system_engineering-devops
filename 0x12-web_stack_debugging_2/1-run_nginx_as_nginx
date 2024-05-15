@@ -5,6 +5,6 @@ sudo chown -R nginx:nginx /var/lib/nginx
 sed -i "1s/.*/user nginx;/" /etc/nginx/nginx.conf
 sudo systemctl restart nginx
 sudo ufw allow 8080
-sudo sed "10i\n*nat\n:PREROUTING ACCEPT [0:0]\n-A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80\nCOMMIT" /etc/ufw/before.rules
+sudo sed "10i#\n*nat\n:PREROUTING ACCEPT [0:0]\n-A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80\nCOMMIT" /etc/ufw/before.rules
 sudo service ufw restart
 sudo ufw enable
