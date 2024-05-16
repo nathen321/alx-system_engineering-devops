@@ -43,4 +43,4 @@ frontend www-http
 backend www-backend
         redirect scheme https if !{ ssl_fc }
         server 531337-web-01 52.201.160.255:80 check
-        server 531337-web-02 100.25.102.0:80 check
+        server 531337-web-02 100.25.12.20:80 check
