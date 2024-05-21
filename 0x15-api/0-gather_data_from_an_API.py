@@ -45,7 +45,7 @@ def main():
     NUMBER_OF_DONE_TASKS = taskdone(todos)
     TOTAL_NUMBER_OF_TASKS = numtask(todos)
     TASK_TITLE = tasktitle(todos)
-    print("Employee {} is done with tasks({}/{})".format(
+    print("Employee {} is done with tasks({}/{}):".format(
         EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS))
     for title in TASK_TITLE:
         print(title)
