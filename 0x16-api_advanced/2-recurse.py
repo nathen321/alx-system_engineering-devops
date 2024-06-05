@@ -5,8 +5,6 @@ import requests
 
 def recurse(subreddit, hot_list=[], count=0, after=None):
     """Queries the Reddit API"""
-    import requests
-
     sub_info = requests.get("https://www.reddit.com/r/{}/hot.json"
                             .format(subreddit),
                             params={"count": count, "after": after},
