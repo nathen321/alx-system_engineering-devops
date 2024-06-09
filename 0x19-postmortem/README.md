@@ -1,21 +1,24 @@
+# unexpected power outage broke the network of the school
+
+
 ## Issue Summary
 Duration: June 9, 2024, from 11:00 PM to 11:30 PM (PST)
 
-Impact: Power outage affecting various schools in the Livermore Valley Joint Unified School District (LVJUSD), impacting HVAC units, lights, and distance learning capabilities.
+Impact: Power outage affecting ***** schools in casablanca morocco, impacting HVAC units, lights, and distance learning capabilities, and global network of the school.
 
-Root Cause: Public Safety Power Shut-off (PSPS) by PG&E due to extreme fire danger conditions.
+Root Cause: Public Safety Power Shut-off (PSPS) by PG&E due to maintenance.
 
 
 ## Timeline
-11:00 PM: Power outage detected by school staff.
-11:00 PM: School staff initiate investigation, focusing on generator performance and communication systems.
-11:15 PM: Incident escalated to District leadership.
-11:20 PM: District leadership communicates with staff and families about the power outage.
-11:30 PM: Power restored.
+11:00 PM: Power outage detected by school staf.
+14:00 PM: school staff contact the technician for network issue with the teacher.
+15:15 PM: problem with dns configuration detected.
+16:20 PM: contacting the school main branch technicien for intervention.
+16:50 PM: network restored.
 
 ## Root Cause and Resolution
 
-The power outage was caused by a Public Safety Power Shut-off (PSPS) by PG&E due to extreme fire danger conditions. The PSPS resulted in the loss of power to various schools in the LVJUSD. The outage was resolved when the PSPS was lifted, and power was restored to the affected areas.
+The power outage was caused by a Public Safety Power Shut-off (PSPS) by PG&E due to maintenance. The PSPS resulted in the loss of power to various schools in the LVJUSD. The outage was resolved when the PSPS was lifted, and power was restored to the affected areas.
 
 ## Corrective and Preventative Measures
 Enhanced Communication:
