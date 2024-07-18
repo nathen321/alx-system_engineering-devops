@@ -1,3 +1,10 @@
 # Puppet script
-exec { '/usr/bin/env sed -i s/15/1000/ /etc/default/nginx': }
--> exec { '/usr/bin/env service nginx restart': }
+exec { 'increase-hard-file-limit-holberton-user':
+  command => 'sed -i "/holberton hard/s/4/50000/" /etc/security/limits.conf',
+  path    => '/usr/local/bin/:/bin/'
+}
+
+exec { 'increase-soft-file-limit-for-holberton-user':
+  command => 'sed -i "/holberton soft/s/5/50000/" /etc/security/limits.conf',
+  path    => '/usr/local/bin/:/bin/'
+}
