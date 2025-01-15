@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 #starting apache
 service apache2 start
+sudo echo "Hello ALX" | /var/www/html/index.html
