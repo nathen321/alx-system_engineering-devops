@@ -3,9 +3,8 @@
 sudo adduser nginx
 sudo chown -R nginx:nginx /var/log/nginx
 sudo chown -R nginx:nginx /var/lib/nginx
-sudo sed -i "1s/.*/user nginx;/" /etc/nginx/nginx.conf
-sudo systemctl restart nginx
-sudo ufw allow 8080
-sudo sed -i "10i#\n*nat\n:PREROUTING ACCEPT [0:0]\n-A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80\nCOMMIT" /etc/ufw/before.rules
-sudo service ufw restart
-sudo ufw enable
+sed -i "s/#user www-data/user ngnix/" /etc/nginx/nginx.conf
+sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+chmod 644 /etc/nginx/nginx.conf
+pkill apache2
+sudo -u nginx service nginx restart
